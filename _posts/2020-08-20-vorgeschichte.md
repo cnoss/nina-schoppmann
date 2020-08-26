@@ -14,20 +14,20 @@ Seit seiner Errichtung wurde das Haus stets in Stand gehalten, es fanden aber ke
 
 
 <div class="gallery" data-columns="3">
-<img src="/images/vorgeschichte/-2657c9b8-93e4-4c75-b6d6-3a71d4b223de.jpeg">
-<img src="/images/vorgeschichte/-2b638996-ef8b-4fa3-beb3-b0a393421beb.jpeg">
-<img src="/images/vorgeschichte/-3f2d68ec-bbd8-48a3-bfb7-57d42aec4179.jpeg">
-<img src="/images/vorgeschichte/-74e54d4a-65c9-4917-8d1c-dc106cb434f1.jpeg">
-<img src="/images/vorgeschichte/-a0408a69-3760-4303-800d-f3d892319d67.jpeg">
-<img src="/images/vorgeschichte/-a1cac12d-9588-47d4-aa39-3f2ba1435264.jpeg">
-<img src="/images/vorgeschichte/-a4e81c20-f195-4f6e-849f-dd757789e6b7.jpeg">
-<img src="/images/vorgeschichte/-bf71bb45-ff7b-494a-9c6c-7c19379930ce.jpeg">
-<img src="/images/vorgeschichte/-cedb2c7d-9628-4205-9071-658394faebb7.jpeg">
-<img src="/images/vorgeschichte/-d2eb6277-e1fe-4863-b7d8-96efd9bae159.jpeg">
-<img src="/images/vorgeschichte/-d691a7ac-2806-450a-a7f1-739697b04e12.jpeg">
-<img src="/images/vorgeschichte/-e4253dd0-da4a-4ebe-af31-faef1a036c99.jpeg">
-<img src="/images/vorgeschichte/-ecc39f92-d003-4057-8643-8bcb4b2bcb33.jpeg">
-<img src="/images/vorgeschichte/-edf83698-825d-4ddd-a784-636825d30931.jpeg">
+<img src="./images/vorgeschichte/-2657c9b8-93e4-4c75-b6d6-3a71d4b223de.jpeg">
+<img src="./images/vorgeschichte/-2b638996-ef8b-4fa3-beb3-b0a393421beb.jpeg">
+<img src="./images/vorgeschichte/-3f2d68ec-bbd8-48a3-bfb7-57d42aec4179.jpeg">
+<img src="./images/vorgeschichte/-74e54d4a-65c9-4917-8d1c-dc106cb434f1.jpeg">
+<img src="./images/vorgeschichte/-a0408a69-3760-4303-800d-f3d892319d67.jpeg">
+<img src="./images/vorgeschichte/-a1cac12d-9588-47d4-aa39-3f2ba1435264.jpeg">
+<img src="./images/vorgeschichte/-a4e81c20-f195-4f6e-849f-dd757789e6b7.jpeg">
+<img src="./images/vorgeschichte/-bf71bb45-ff7b-494a-9c6c-7c19379930ce.jpeg">
+<img src="./images/vorgeschichte/-cedb2c7d-9628-4205-9071-658394faebb7.jpeg">
+<img src="./images/vorgeschichte/-d2eb6277-e1fe-4863-b7d8-96efd9bae159.jpeg">
+<img src="./images/vorgeschichte/-d691a7ac-2806-450a-a7f1-739697b04e12.jpeg">
+<img src="./images/vorgeschichte/-e4253dd0-da4a-4ebe-af31-faef1a036c99.jpeg">
+<img src="./images/vorgeschichte/-ecc39f92-d003-4057-8643-8bcb4b2bcb33.jpeg">
+<img src="./images/vorgeschichte/-edf83698-825d-4ddd-a784-636825d30931.jpeg">
 </div>
 
 ## Erhaltungsaufwand
