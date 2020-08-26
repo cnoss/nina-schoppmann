@@ -1,0 +1,38 @@
+<header class="header">
+  <p class="header__tagline">{{ site.data.settings.basic_settings.site_tagline }}</p>
+  <div class="header__content">
+    
+    <h1 class="header__title">
+      <a href="{{ site.baseurl }}/" class="header__title">
+        {{ site.data.settings.basic_settings.site_title }}
+      </a>
+    </h1>
+    <h2 class="header__subtitle">{{ site.data.settings.basic_settings.site_subtitle }}</h2>
+    <!--div class="menu">
+			<div class="menu__toggle js-menu-toggle">
+				<div class="menu__toggle__icon"><span></span></div>
+			</div>
+			<div class="menu__wrap">
+				<ul class="menu__list">
+					{% for item in site.data.settings.menu_settings.menu_items %}
+					<li class="menu__list__item">
+						<a href="{{ item.url | relative_url }}" class="menu__list__item__link">{{ item.title }}</a>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div-->
+
+    <!--div class="projects-menu">
+			<ul class="menu__list">
+				{% for project in site.projects reversed %}
+				<li class="menu__list__item">
+					<a href="{{ project.url | relative_url }}" class="menu__list__item__link">{{ project.title }}</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</div-->
+  <div class="more"><i class="icon icon--l">expand_more</i></div>
+  </div>
+
+</header>

@@ -1,0 +1,79 @@
+
+/* Sizes
+Using Lucas Numbers 1, 3, 4, 7, 11, 18, 29, 47, 76, 
+---------------------------------------------------------------------------- */
+$xs: 7px;
+$s: 11px;
+$m: 18px;
+$l: 29px;
+$xl: 47px;
+
+
+/* Font Properties
+---------------------------------------------------------------------------- */
+$font-family-serif: PTserif;
+$font-family-sans: Barlow;
+$base-font-size: $m;
+$font-icons: 'Material Icons';
+
+/* Font Weights
+---------------------------------------------------------------------------- */
+$fw-light: 300;
+$fw-normal: 400;
+$fw-medium: 500;
+$fw-bold: 600;
+
+
+/* Line Heights
+---------------------------------------------------------------------------- */
+$lh-tight: 100%;
+$lh-default: 130%;
+$lh-loose: 150%;
+
+
+/* Base Colors
+---------------------------------------------------------------------------- */
+$red: hsla(354, 43, 55, 1);
+$grey-dark: hsla(241, 8, 32, 1);
+$grey-medium: hsla(224, 12, 60, 1);
+$grey-light: hsla(224, 2, 84, 1);
+$yellow: hsla(50, 78, 35, 1);
+$black: hsla(0,0,0,0.9);
+
+$cs-beige-light: #F0F1F2;
+$cs-beige-medium: #BF9D5E;
+$cs-beige-medium-light: #D9CAB0;
+$cs-beige-dark: #8C775E; 
+$cs-beige-accent: #D9AE96; 
+
+$cs-green-light: #F2F2F2;
+$cs-green-medium: #D2D9A3;
+$cs-green-medium-light: #B4C0D9;
+$cs-green-dark: #BBBF9B; 
+$cs-green-accent: #A7BF50; 
+
+
+/* Functional Colors
+---------------------------------------------------------------------------- */
+$interaction-color: $cs-beige-accent;
+$decoration-color: $yellow;
+$text-color: $black;
+$headline-color: #000;;
+$headline-color-light: $grey-light;
+$aside-color: $yellow;
+$border-color: $grey-light;
+$seperator-color: $cs-green-accent;
+
+/* Transitions
+---------------------------------------------------------------------------- */
+$tr-fast: 0.2s;
+$tr-medium: 0.6s;
+$tr-slow: 1s;
+
+/* Misc
+---------------------------------------------------------------------------- */
+$bw: 2px;
+$text-shadow: 0 0 20px rgba(0,0,0,0.9);
+$max-width-content: 50rem;
+$aside-width: 20rem;
+$border-width: 2px;

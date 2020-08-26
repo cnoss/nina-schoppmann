@@ -1,0 +1,136 @@
+// Header
+// ------------------------------------------------------------------------- //
+.header{
+
+  z-index: -10;
+  position: fixed;
+  top: 0;
+
+  height: 100vh;
+  padding: $m;
+  background-image: url(/images/hero/nina-schoppmann-osteopathie-portrait.jpg);
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  flex-direction: column;
+
+
+
+  &__content{
+    align-self: flex-end;
+    z-index: 1;
+  }
+  
+  &__title{
+    margin-bottom: $xs;
+    a{
+      color: $black;
+      font-weight: $fw-medium;
+      text-decoration: none;
+    }
+  }
+
+  &__subtitle{
+    font-weight: 400;
+  }
+  
+  &__tagline{
+    margin-bottom: $xl;
+    flex-grow: 1;
+  }
+
+  &::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(242,239,228,1), rgba(9,9,121,0));
+    z-index: 0;
+  }
+
+  .more{
+    text-align: center;
+  }
+}
+
+
+// Contact
+// ------------------------------------------------------------------------- //
+
+.contact{
+
+  margin-bottom: $m;
+
+  &__item{
+    &--is-hidden{
+      display: none;
+    }
+  
+    &--with-seperator{
+      margin-bottom: $s;
+    }
+  }
+}
+
+
+
+// Memberships
+// ------------------------------------------------------------------------- //
+
+.membership{
+  text-align: center;
+  &-grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+  
+    &__item{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: $m;
+    }
+  }
+
+}
+
+
+// Page (Main Content)
+// ------------------------------------------------------------------------- //
+.page{
+  margin-top: 100vh;
+  background-color: #fff;
+}
+
+// Content Block
+// ------------------------------------------------------------------------- //
+
+.content-block{
+  
+  padding: $m;
+  // background-color: #fff;
+}
+
+// Footer
+// ------------------------------------------------------------------------- //
+
+.footer{
+  background-color: $cs-beige-light;
+  padding: $m;
+  
+
+  &__copyright{
+    border-top: solid 1px #fff;
+    padding-top: $m;
+
+    &-year::after{
+      content:"//";
+      display: inline-block;
+      color: $seperator-color;
+      margin-left: $xs;
+      margin-right: $xs;
+    }
+  }
+
+}
