@@ -8,7 +8,7 @@
 
   height: 100vh;
   padding: $m;
-  background-image: url(/images/hero/nina-schoppmann-osteopathie-portrait.jpg);
+  background-image: url(/images/hero/nina-schoppmann-osteopathie-portrait-at-work.jpg);
   background-size: cover;
   background-position: right;
   display: flex;
@@ -133,4 +133,30 @@
     }
   }
 
+}
+
+
+// Course Item
+// ------------------------------------------------------------------------- //
+
+.course-item{
+
+  &__title{
+    font-weight: $fw-normal;
+  }
+  &__title::before{
+    content:"«";
+    display: inline-block;
+  }
+  &__title::after{
+    content:"»";
+    display: inline-block;
+  }
+  &__year::before{
+    content:"//";
+    display: inline-block;
+    color: $seperator-color;
+    margin-left: $xs;
+    margin-right: $xs;
+  }
 }
