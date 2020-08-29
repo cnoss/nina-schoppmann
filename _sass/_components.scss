@@ -192,7 +192,9 @@
     display: grid;
 
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
     column-gap: $xs;
+    row-gap: $xs;;
   }
 }
 
