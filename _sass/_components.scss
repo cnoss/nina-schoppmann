@@ -4,8 +4,7 @@
   position: fixed;
   z-index: -10;
   top: 0;
-  display: flex;
-  flex-direction: column;
+
   width: 100vw;
   height: 100vh;
   padding: $m;
@@ -14,16 +13,25 @@
   background-position: right;
   background-size: cover;
 
-
   &__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     z-index: 1;
-    align-self: flex-end;
     width: 100%;
     padding-bottom: $l;
+    @media only screen and (min-width: $vp-medium)  {
+      background-color: $cs-beige-dark;
+      padding:$m;
 
-    @media (orientation: landscape) {
-      align-self: flex-start;
+      &  *{
+        color: #fff;
+      }
     }
+  }
+
+  &__image{
+    display: none;
   }
 
   &__title {
@@ -32,18 +40,14 @@
 
     a {
       font-weight: $fw-medium;
-
       text-decoration: none;
-
       color: $black;
     }
   }
 
   &__subtitle {
     font-weight: 400;
-
     max-width: 20 * $m;
-
     opacity: $op-medium;
   }
 
@@ -59,9 +63,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-
     content: '';
-
     background: linear-gradient(0deg, rgba(255,255,255,.8), rgba(9,9,121,0));
   }
 
@@ -71,6 +73,23 @@
 
   @media (orientation: landscape) {
     background-image: url(../images/hero/nina-schoppmann-osteopathie-landscape.jpg);
+  }
+
+  @media only screen and (min-width: $vp-medium)  {
+    background-image: none;
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-auto-rows: 50vw;
+    padding: 0;
+
+    .more{
+      display: none;
+    }
+
+    &__image{
+      display: block;
+    }
+  
   }
 }
 
@@ -118,6 +137,14 @@
 // ------------------------------------------------------------------------- //
 .page {
   margin-top: 100vh;
+
+  @media only screen and (min-width: $vp-medium)  {
+    margin-top: 50vw;
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    padding: 0;
+
+  }
 }
 
 
@@ -188,6 +215,19 @@
 
   background-color: #fff;
 
+  @media only screen and (min-width: $vp-medium) {
+    height: 50vw;
+    border-top: solid 2px $cs-beige-medium-light;
+  }
+
+  &--is-square{
+    & > img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
   &--2-columns {
     display: grid;
 
@@ -195,6 +235,12 @@
     grid-template-rows: auto;
     column-gap: $xs;
     row-gap: $xs;;
+
+    & > img{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
@@ -209,4 +255,25 @@
   padding-bottom: $xl;
 
   background-color: #fff;
+
+  &--with-background{
+    background-color: $cs-green-light;
+  }
+
+  &--is-centered{
+    display: flex;
+    align-items: center;
+  }
+
+  &--from-medium{
+    display: none;
+  }
+
+  @media only screen and (min-width: $vp-medium) {
+    border-top: solid 2px $cs-beige-medium-light;
+
+    &--from-medium{
+      display:  flex;
+    }
+  }
 }

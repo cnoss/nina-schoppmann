@@ -1,13 +1,18 @@
 <header class="header">
-  <p class="header__tagline"><i class="icon">spa</i>{{ site.data.settings.basic_settings.site_tagline }}</p>
+
   <div class="header__content">
-    
-    <h1 class="header__title">
-      <a href="{{ site.baseurl }}/" class="header__title">
-        {{ site.data.settings.basic_settings.site_title }}
-      </a>
-    </h1>
-    <h2 class="header__subtitle">{{ site.data.settings.basic_settings.site_subtitle }}</h2>
+    <p class="header__tagline">
+      <i class="icon">spa</i>
+      {{ site.data.settings.basic_settings.site_tagline }}</p>
+
+    <div class="header__title-group">
+      <h1 class="header__title">
+        <a href="{{ site.baseurl }}/" class="header__title">
+          {{ site.data.settings.basic_settings.site_title }}
+        </a>
+      </h1>
+      <h2 class="header__subtitle">{{ site.data.settings.basic_settings.site_subtitle }}</h2>
+    </div>
     <!--div class="menu">
 			<div class="menu__toggle js-menu-toggle">
 				<div class="menu__toggle__icon"><span></span></div>
@@ -22,8 +27,8 @@
 				</ul>
 			</div>
 		</div-->
-
-    <!--div class="projects-menu">
+    
+        <!--div class="projects-menu">
 			<ul class="menu__list">
 				{% for project in site.projects reversed %}
 				<li class="menu__list__item">
@@ -32,7 +37,13 @@
 				{% endfor %}
 			</ul>
 		</div-->
-  <div class="more"><i class="icon icon--l">expand_more</i></div>
+    <div class="more">
+      <i class="icon icon--l">expand_more</i>
+    </div>
+  </div>
+
+  <div class="header__image">
+    <img src="../images/hero/nina-schoppmann-osteopathie-1x1.jpg" alt="Nina Schoppmann - Osteopathie in Gummersbach">
   </div>
 
 </header>
