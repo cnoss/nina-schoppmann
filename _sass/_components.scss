@@ -19,6 +19,7 @@
   background-image: url(../images/hero/nina-schoppmann-osteopathie-portrait.jpg);
   background-position: right;
   background-size: cover;
+  overflow: hidden;
 
   &__content {
     height: 100%;
@@ -175,7 +176,7 @@
 // ------------------------------------------------------------------------- //
 .page {
   margin-top: 100vh;
-
+  overflow: hidden;
   @media only screen and (min-width: $vp-medium)  {
     margin-top: 50vw;
     display: grid;
@@ -193,7 +194,7 @@
     margin-left: calc(calc(100vw/2) - #{$vp-xlarge / 2});
     grid-template-columns: $vp-xlarge / 3  $vp-xlarge / 3  $vp-xlarge / 3;
     grid-auto-rows: $vp-xlarge / 3;
-    
+
   }
 }
 
@@ -294,13 +295,16 @@
     }
   }
 
-  &--2-columns {
-    display: grid;
 
+  &--2-columns {
+    
+    display: grid;
+    overflow: hidden;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     column-gap: $xs;
-    row-gap: $xs;;
+    row-gap: $xs;
+    height: 100%;
 
     & > img{
       object-fit: cover;
