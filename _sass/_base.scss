@@ -12,6 +12,10 @@ html, body{
   scroll-behavior: smooth;
 }
 
+body{
+  background-color:$cs-beige-medium-light;
+}
+
 blockquote{
   font-family: $font-family-serif;
   color: $headline-color;
