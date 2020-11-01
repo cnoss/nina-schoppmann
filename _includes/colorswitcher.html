@@ -1,0 +1,81 @@
+
+<style type="text/css">
+  {% capture sass_file %}
+  .colorswitcher-wrap{
+    display: inline-flex;
+
+    .colorswitcher{
+      margin-right: 10px;
+      .color{
+        display: inline-block;
+        margin-right: 1px;
+        .color-tile{
+          width: 24px;
+          height: 24px;
+          &:hover{
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .colorform{
+      .input, .submit{
+        position: relative;
+        width: 80px;
+        padding: 3px;
+        border: solid 1px rgba(0,0,0,0.5);
+      }
+
+      .submit{
+        background-color: rgba(0,0,0,0.5);
+        color: rgba(255,255,255,0.5);
+      }
+    }
+  }
+  {% endcapture %}
+  {{ sass_file | scssify }}
+</style>
+
+<div class="colorswitcher-wrap">
+  <ul class="colorswitcher">
+    <li class="color" data-hex="A66565"></li>
+    <li class="color" data-hex="D9A648"></li>
+    <li class="color" data-hex="BFAE99"></li>
+    <li class="color" data-hex="D9CDBF"></li>
+  </ul>
+  
+  <form class="colorform">
+    <input type="text" class="input" name="hex" placeholder="000000">
+    <input type="submit" class="submit" value="anwenden">
+  </form>
+</div>
+
+<script type="text/javascript">
+
+function changeColor(colorHex){ 
+  document.documentElement.style.setProperty("--tileColor", "#" + colorHex);
+}
+
+document.querySelector(".colorswitcher").querySelectorAll(".color").forEach(function(color) {
+  let colorTile = document.createElement("div"); 
+  let colorHex = color.dataset.hex;
+  colorTile.setAttribute("class", "color-tile");
+  colorTile.setAttribute("style", "background-color:#" + colorHex);
+  colorTile.addEventListener("click", function(){ changeColor(colorHex); }, false);
+  color.appendChild(colorTile);
+});
+
+const colorForm = document.querySelector(".colorform");
+colorForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  let val = event.target.querySelector(".input").value;
+  if(val.match(/....../)){
+    changeColor(val);
+  }else{
+    alert("Da muss ein Hexwert rein, z.B. 000000 für schwarz ;) ");
+  }
+
+
+});
+
+</script>

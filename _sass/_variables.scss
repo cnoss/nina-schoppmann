@@ -39,6 +39,10 @@ $op-medium:0.6;
 
 /* Base Colors
 ---------------------------------------------------------------------------- */
+:root{
+  --tileColor: #8C775E;
+}
+
 $red: hsla(354, 43, 55, 1);
 $grey-dark: hsla(241, 8, 32, 1);
 $grey-medium: hsla(224, 12, 60, 1);
@@ -49,7 +53,7 @@ $black: hsla(0,0,0,0.9);
 $cs-beige-light: #F0F1F2;
 $cs-beige-medium: #BF9D5E;
 $cs-beige-medium-light: #D9CAB0;
-$cs-beige-dark: #8C775E; 
+$cs-beige-dark: var(--tileColor);
 $cs-beige-accent: #D9AE96; 
 
 $cs-green-light: #F2F2F2;

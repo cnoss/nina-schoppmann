@@ -176,7 +176,7 @@
 // ------------------------------------------------------------------------- //
 .page {
   margin-top: 100vh;
-  overflow: hidden;
+  
   @media only screen and (min-width: $vp-medium)  {
     margin-top: 50vw;
     display: grid;
