@@ -1,6 +1,8 @@
 
 @media only screen and (min-width: $vp-xlarge) {
-  .header, .page, .footer{
+  .header,
+  .page,
+  .footer {
     max-width: $vp-xlarge;
   }
 }
@@ -11,7 +13,7 @@
   position: fixed;
   z-index: -10;
   top: 0;
-
+  overflow: hidden;
   width: 100vw;
   height: 100vh;
   padding: $m;
@@ -19,26 +21,32 @@
   background-image: url(../images/hero/nina-schoppmann-osteopathie-portrait.jpg);
   background-position: right;
   background-size: cover;
-  overflow: hidden;
+
+  &__tagline{
+    a{
+      text-decoration: none;
+    }
+  }
 
   &__content {
-    height: 100%;
+    z-index: 1;
     display: flex;
     flex-direction: column;
-    z-index: 1;
     width: 100%;
+    height: 100%;
     padding-bottom: $l;
-    @media only screen and (min-width: $vp-medium)  {
-      background-color: $cs-beige-dark;
-      padding:$m;
+    @media only screen and (min-width: $vp-medium) {
+      padding: $m;
 
-      &  *{
+      background-color: $cs-beige-dark;
+
+      &  * {
         color: #fff;
       }
     }
   }
 
-  &__image{
+  &__image {
     display: none;
   }
 
@@ -48,14 +56,18 @@
 
     a {
       font-weight: $fw-medium;
+
       text-decoration: none;
+
       color: $black;
     }
   }
 
   &__subtitle {
     font-weight: 400;
+
     max-width: 20 * $m;
+
     opacity: $op-medium;
   }
 
@@ -71,7 +83,9 @@
     right: 0;
     bottom: 0;
     left: 0;
+
     content: '';
+
     background: linear-gradient(0deg, rgba(255,255,255,.8), rgba(9,9,121,0));
   }
 
@@ -83,32 +97,34 @@
     background-image: url(../images/hero/nina-schoppmann-osteopathie-landscape.jpg);
   }
 
-  @media only screen and (min-width: $vp-medium)  {
-    background-image: none;
+  @media only screen and (min-width: $vp-medium) {
     display: grid;
-    grid-template-columns: 50vw 1fr;
-    grid-auto-rows: 50vw;
     padding: 0;
 
-    .more{
+    background-image: none;
+
+    grid-template-columns: 50vw 1fr;
+    grid-auto-rows: 50vw;
+
+    .more {
       display: none;
     }
 
-    &__image{
+    &__image {
       display: block;
     }
-  
   }
 
-  @media only screen and (min-width: $vp-large)  {
+  @media only screen and (min-width: $vp-large) {
     grid-template-columns: 33.3vw 33.3vw 1fr;
     grid-auto-rows: 33vw;
 
-    &__image{
+    &__image {
       grid-column: 2 / span 2;
-      img{
+      img {
         width: 100%;
         height: $vp-xlarge / 3;
+
         object-position: center -150px;
         object-fit: cover;
       }
@@ -116,15 +132,17 @@
   }
 
   @media only screen and (min-width: $vp-xlarge) {
+    left: calc(calc(100vw/2) - #{$vp-xlarge / 2});
+
     grid-template-columns: $vp-xlarge / 2  $vp-xlarge / 2;
     grid-auto-rows: $vp-xlarge / 2;
-    left: calc(calc(100vw/2) - #{$vp-xlarge / 2});
-  
-    &__image{
+
+    &__image {
       grid-column: 2 / span 2;
-      img{
+      img {
         width: 100%;
         height: $vp-xlarge / 2;
+
         object-position: center;
         object-fit: cover;
       }
@@ -174,17 +192,19 @@
 
 // Page (Main Content)
 // ------------------------------------------------------------------------- //
-.page {
+.page.grid {
   margin-top: 100vh;
-  
-  @media only screen and (min-width: $vp-medium)  {
-    margin-top: 50vw;
+
+  @media only screen and (min-width: $vp-medium) {
     display: grid;
-    grid-template-columns: 50vw 1fr;
+    margin-top: 50vw;
     padding: 0;
+
+    grid-template-columns: 50vw 1fr;
   }
-  @media only screen and (min-width: $vp-large)  {
+  @media only screen and (min-width: $vp-large) {
     margin-top: 33vw;
+
     grid-template-columns: 33.3vw 33.3vw 1fr;
     grid-auto-rows: 33vw;
   }
@@ -192,9 +212,33 @@
   @media only screen and (min-width: $vp-xlarge) {
     margin-top: $vp-xlarge / 2;
     margin-left: calc(calc(100vw/2) - #{$vp-xlarge / 2});
+
     grid-template-columns: $vp-xlarge / 3  $vp-xlarge / 3  $vp-xlarge / 3;
     grid-auto-rows: $vp-xlarge / 3;
+  }
+}
 
+.page.simple {
+  margin-top: 100vh;
+
+  @media only screen and (min-width: $vp-medium) {
+    display: grid;
+    margin-top: 50vw;
+    padding: 0;
+
+    grid-template-columns: 50vw 1fr;
+  }
+  @media only screen and (min-width: $vp-large) {
+    margin-top: 33vw;
+
+    grid-template-columns: 33.3vw 1fr;
+  }
+
+  @media only screen and (min-width: $vp-xlarge) {
+    margin-top: $vp-xlarge / 2;
+    margin-left: calc(calc(100vw/2) - #{$vp-xlarge / 2});
+
+    grid-template-columns: $vp-xlarge / 3  1fr;
   }
 }
 
@@ -204,6 +248,7 @@
 
 .footer {
   padding: $m;
+
   border-top: solid 2px $cs-beige-medium-light;
   background-color: $cs-beige-light;
 
@@ -212,6 +257,8 @@
     padding-top: $m;
 
     border-top: solid 1px #fff;
+
+    position: relative;
 
     &-year::after {
       display: inline-block;
@@ -222,12 +269,22 @@
 
       color: $seperator-color;
     }
+
+    &-impressum{
+      position: absolute;
+      right: $xs;
+      top: $m;
+      font-weight: $fw-bold;
+    }
+
+    
   }
 
   @media only screen and (min-width: $vp-xlarge) {
+    margin-left: calc(calc(100vw/2) - #{$vp-xlarge / 2});
+
     grid-template-columns: $vp-xlarge / 3  $vp-xlarge / 3  $vp-xlarge / 3;
     grid-auto-rows: $vp-xlarge / 3;
-    margin-left: calc(calc(100vw/2) - #{$vp-xlarge / 2});
   }
 }
 
@@ -274,42 +331,45 @@
 
   @media only screen and (min-width: $vp-medium) {
     height: 50vw;
+
     border-top: solid 2px $cs-beige-medium-light;
   }
 
-  @media only screen and (min-width: $vp-large)  {
+  @media only screen and (min-width: $vp-large) {
     height: 33.3vw;
   }
 
-  &--is-square{
-    & > img{
+  &--is-square {
+    & > img {
       width: 100%;
       height: 100%;
+
       object-fit: cover;
     }
   }
 
-  &--focus-right{
-    & > img{
+  &--focus-right {
+    & > img {
       object-position: right;
     }
   }
 
 
   &--2-columns {
-    
     display: grid;
     overflow: hidden;
+    height: 100%;
+
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     column-gap: $xs;
     row-gap: $xs;
-    height: 100%;
 
-    & > img{
-      object-fit: cover;
+    & > img {
       width: 100%;
       height: 100%;
+
+      object-fit: cover;
     }
   }
 }
@@ -320,51 +380,52 @@
 
 .content-block {
   position: relative;
-  height: 100%;
+  z-index: 2;
   overflow: hidden;
   overflow-y: auto;
-  z-index: 2;
+  height: 100%;
   padding: $m;
   padding-top: $l;
   padding-bottom: $xl;
 
   background-color: #fff;
 
-  &--with-background{
+  &--with-background {
     background-color: $cs-green-light;
   }
 
-  &--with-background-beige{
-    background-color: $cs-beige-dark;
+  &--with-background-beige {
     color: #fff;
+    background-color: $cs-beige-dark;
   }
 
-  &--is-centered{
+  &--is-centered {
     display: flex;
     align-items: center;
   }
 
-  &--from-medium{
+  &--from-medium {
     display: none;
   }
 
-  &--from-large{
+  &--from-large {
     display: none;
   }
 
   @media only screen and (min-width: $vp-medium) {
-    border-top: solid 2px $cs-beige-medium-light;
     padding: $l;
 
-    &--from-medium{
-      display:  flex;
+    border-top: solid 2px $cs-beige-medium-light;
+
+    &--from-medium {
+      display: flex;
     }
   }
 
   @media only screen and (min-width: $vp-large) {
     border-bottom: solid $l transparent;
 
-    &--from-large{
+    &--from-large {
       display: flex;
     }
   }
@@ -373,8 +434,9 @@
 // Quote
 // ------------------------------------------------------------------------- //
 
-.quote{
+.quote {
   font-family: $font-family-serif;
   font-size: $l;
   line-height: $lh-tight;
 }
+

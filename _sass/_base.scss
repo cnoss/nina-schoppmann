@@ -53,6 +53,10 @@ h1{
 
 h2{
   font-size: $l;
+
+  &.has-space{
+    margin-top: $xl;
+  }
 }
 
 h3{
@@ -92,5 +96,24 @@ ul.list{
       color: $seperator-color;
       font-weight: $fw-bold;
     }
+  }
+}
+
+dl{
+  margin-bottom: $l;
+
+  dt{
+    font-weight: $fw-medium;
+    display: block;
+    float: left;
+    margin-right: $xs;
+    &:after{
+      content: ":";
+    }
+  }
+
+  dd{
+    display: block;
+    margin-bottom: $xs;;
   }
 }
