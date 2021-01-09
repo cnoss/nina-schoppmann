@@ -271,12 +271,20 @@
     }
 
     &-impressum{
-      position: absolute;
-      right: $xs;
-      top: $m;
+      padding-bottom: $m;
+
+    border-bottom: solid 1px #fff;
       font-weight: $fw-bold;
     }
 
+    @media only screen and (min-width: $vp-medium) {
+      &-impressum{
+        position: absolute;
+        right: $xs;
+        top: $m;
+        font-weight: $fw-bold;
+      }
+    }
     
   }
 

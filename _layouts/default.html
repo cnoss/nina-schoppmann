@@ -6,6 +6,11 @@
         window.location = "https://nina-schoppmann.de";
   if (!(window.location.host.startsWith("127.0.0.1")) && (window.location.hostname.match(/ninaschoppmann\.de/)))
         window.location = "https://nina-schoppmann.de";
+
+  if(location.pathname !== "/" && location.pathname !== "/impressum.html"){
+    //window.location = "https://nina-schoppmann.de";
+    console.log(location.pathname);
+  }
 </script>
 {% if site.force-https %}
     <script>
