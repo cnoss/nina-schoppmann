@@ -1,5 +1,10 @@
 <!doctype html>
 <html class="no-js" lang="de">
+
+<script>
+  if (!(window.location.host.startsWith("127.0.0.1")) && (window.location.hostname.match(/^www./)))
+        window.location = "https://nina-schoppmann.de";
+</script>
 {% if site.force-https %}
     <script>
     // Don't force http when serving the website locally
