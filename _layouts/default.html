@@ -4,6 +4,8 @@
 <script>
   if (!(window.location.host.startsWith("127.0.0.1")) && (window.location.hostname.match(/^www./)))
         window.location = "https://nina-schoppmann.de";
+  if (!(window.location.host.startsWith("127.0.0.1")) && (window.location.hostname.match(/ninaschoppmann\.de/)))
+        window.location = "https://nina-schoppmann.de";
 </script>
 {% if site.force-https %}
     <script>
